@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de resitro</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/groupStyle.css">
+   
+</head>
+<body>
+
+
+    <main>
+        <h2>Formulario de registro</h2>
+        
+        <form class="pform" action="/:id/userEdit/?_method=PUT" method="POST">
+            
+            
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" required>
+
+        
+            <input type="email" name="mail" id="email" placeholder="E-mail" required>
+           
+            
+            <input type="text" name="pais" id="país" placeholder="País" required>
+
+        
+            <input type="text" name="num" id="celular" placeholder="N° de celular" required>
+            
+         
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
+            
+       
+            <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
+
+            <input type="text" name="perfil"  placeholder="Admin o usuario" required>
+
+            <label for="">Cargar imagen de perfil</label>
+            <input type="file" name="img" value="foto">
+
+         <div class="contenedor-botones">
+            <input class="button-enviar" type="submit" value="Enviar" href="/">
+
+            <a href="login" class="button-enviar">Iniciar sesión</a>
+        </div>
+
+           
+ 
+           
+            </form>
+                
+            
+    </main>
+ 
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

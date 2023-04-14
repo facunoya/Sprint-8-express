@@ -1,0 +1,102 @@
+[
+ {
+  "id": 1,
+  "name": "Roberto",
+  "email": "robert@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2245178652",
+  "password": "$2a$10$2Xko5zBzNcGCYFUXgaP//umGuWTxjIQNc5aJifKMEYS3Bhv8m1nhu",
+  "profile": "Administrador",
+  "avatar": "el_pato_lucas.jpg"
+ },
+ {
+  "id": 2,
+  "name": "fanku",
+  "email": "snoya1987@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$dRIqf4CWl6LlJV8WO13OVOlbL88Ro8I5b4EWYGr03HfHMhgZjpntS",
+  "profile": "Administrador",
+  "avatar": "el_pato_lucas.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Magali",
+  "email": "maga@hotmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$6.HhEcwjq2x.yxEFDsdM3eVXyuwrrrdJ3VCVDZG1WvsA3TKcP3Ie6",
+  "profile": "Administrador",
+  "avatar": ""
+ },
+ {
+  "id": 4,
+  "name": "Guillermo",
+  "email": "guille@hotmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$fvcMaPGqN1N8ot2p1Sw/Qu0zcQWR6ROj70uckmaC5PHDkyQZPwq/6",
+  "profile": "Administrador",
+  "avatar": "banner-seaStar.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Facundo",
+  "email": "facunoya@hotmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2235478965",
+  "password": "$2a$10$HHU/mQ9a0E1AEnsxEuTod.qOGroGrGzIM1Bbv9eB17qtq5YCKuhwG",
+  "profile": "Administrador",
+  "avatar": "avion-003.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Jeremias",
+  "email": "jere@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2235478965",
+  "password": "$2a$10$AN8pJAVkcptIGboUsUuNcOVq0cmhFD/V6t/RNFndR4iYz5cSuxm.K",
+  "profile": "Cliente",
+  "avatar": "bariloche.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Agustina",
+  "email": "agus@hotmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2253654721",
+  "password": "$2a$10$B2BTU/Lrx9ZvCXYacP.WY.4Dt/0aKsRqYfWw/bVnfEFq3Ik9tNkgG",
+  "profile": "Cliente",
+  "avatar": "banner-transparent.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Juan",
+  "email": "juana@dearco.com",
+  "country": "Argentina",
+  "phoneNumber": "2245178652",
+  "password": "$2a$10$osGr9cTVpn82wTlbYZ7UG.fqCLGb3FfA2JLcQtEBWtUBRJS7hgC3O",
+  "profile": "Administrador",
+  "avatar": "avion-002.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Guille",
+  "email": "guille@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$WyiXC/ne.cLF3usamS56e.g0eaX/f5e2fwzNsmdrxXve9dpcgpQFK",
+  "profile": "Administrador",
+  "avatar": "avion.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Alejandro",
+  "email": "ale@gmail.com",
+  "country": "Colombia",
+  "phoneNumber": "223568879",
+  "password": "$2a$10$H0Zi1UvNTX5QNluOYt23YOEU90NOlSvNlFShJuJ3jqhRpqN/1E8D2",
+  "profile": "Cliente",
+  "avatar": "banner-transparent.jpg"
+ }
+]

@@ -1,0 +1,16 @@
+.invalido {
+    border: solid 2px #842029;
+    color: #842029;
+    box-shadow: 0 5px 10px #842029;
+}
+
+.valido {
+    border: solid 2px #198754;
+    color: #198754;
+
+}
+
+.msjsErrors {
+    color: #842029;
+    margin-top: 5px;
+}

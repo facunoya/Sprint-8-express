@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Carrito</title>
+</head>
+<body class="bodyClass">
+    <%- include('../partials/header') %>    
+    <h2>Agregar producto</h2>
+    <form action="/prueba" method="POST" enctype="multipart/form-data" >
+        <label for="">Destino</label>
+        <input type="number" name="destination_id">
+        <br>
+        <label for="">Dias</label>
+        <input type="text" name="staying">
+        <br>
+        <label for="">Precio</label>
+        <input type="text" name="price">
+        <br>
+        <label for="">Ofertas</label>
+        <input type="text" name="offer">
+        <br>
+        <label for="">Ida</label>
+        <input type="text" name="checkIn">
+        <br>
+        <label for="">Vuelta</label>
+        <input type="text" name="checkOut">
+        <br>
+        <label for="">Hospedaje</label>
+        <input type="text" name="lodging">
+        <br>
+        <label for="">Vehiculo</label>
+        <input type="text" name="vehicle_id">
+        <br>
+        <label for="">Excursion1</label>
+        <input type="text" name="tour">
+        <br>
+        <label for="">Excursion2</label>
+        <input type="text" name="tour2">
+        <br>
+        <label for="">Cargar imagen de destino</label>
+        <input type="file" name="imgURL">
+        <br>
+        <button type="submit">Crear</button>
+    </form>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
+

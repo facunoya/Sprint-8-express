@@ -1,0 +1,43 @@
+<% for(let i=0; i < producto.length; i++) {%>
+    <article class="producto"> <!--Este es el archivo que vamos a usar para crear el producto-->
+        <div class="box-product">
+            <div class="topProduct">
+                <img class="img" src="/img/<%= producto[i].imgURL %>" alt="">
+                <h2 class="nombreProducto">
+                    <%= producto[i].Destinations.name%>
+                </h2>
+                <p class="descripcionImagen">
+                    <%= producto[i].descripcionImagen %>
+                </p>
+            </div>
+            <div class="descripcionProducto">
+                <!-- <p class="dias">10 dias</p> -->
+                <h3 class="vuelos">Vuelos</h3>
+                <p class="ida textoPlano"><i class="fa-sharp fa-solid fa-plane-departure"></i>ida: <%=
+                        producto[i].checkIn%>
+                </p>
+                <p class="vuelta textoPlano"><i class="fa-solid fa-plane-arrival"></i>vuelta: <%= producto[i].checkOut%>
+                </p>
+                <h3 class="subtitulo">Hospedaje</h3>
+                <p class="hospedaje textoPlano">
+                    <%= producto[i].lodging%>
+                </p>
+                <ul type="none" class="excursionList">
+                    <h3 class="hospedaje ">Excursiones incluidas</h3>
+                    <li class="elementoExcursion textoPlano">
+                        <%= producto[i].tour%>
+                    </li>
+                    <li class="elementoExcursion textoPlano">
+                        <%= producto[i].tour2%>
+                    </li>
+                </ul>
+                <p class="precio">$<%= producto[i].price%>
+                </p>
+                <p class="ofertas">
+                    <%= producto[i].offer%> OFF
+                </p>
+                <button class="comprar">comprar</button>
+            </div>
+        </div>
+    </article>
+    <%}%>

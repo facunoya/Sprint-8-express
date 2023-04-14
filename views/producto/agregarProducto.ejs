@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/groupStyle.css">
+    <link rel="stylesheet" href="/css/errorForm.css">
+        <title>Carrito</title>
+</head>
+
+<body class="bodyClass">
+    <%- include('../partials/header') %>
+        <main>
+            <h2>Agregar producto</h2>
+        <form class="formCreateProduct" action="/crearProducto" method="POST" enctype="multipart/form-data">
+            <label for="">Destino</label>
+            <input class="destination" type="number" name="destination_id">
+            <p class="destinationErrors msjsErrors"></p>
+            <br>
+            <label for="">Descripcion imagen</label>
+            <input class="descripcionImagen" type="text" name="descripcionImagen">
+            <p class="descripcionImagenErrors msjsErrors"></p>
+            <br>
+            <label for="">Dias</label>
+            <input class="staying" type="number" name="staying">
+            <p class="stayingErrors msjsErrors"></p>
+            <br>
+            <label for="">Precio</label>
+            <input class="price" type="number" name="price">
+            <p class="priceErrors msjsErrors"></p>
+            <br>
+            <label for="">Ofertas</label>
+            <input class="offer" type="number" name="offer">
+            <p class="offerErrors msjsErrors"></p>
+            <br>
+            <label for="">Ida</label>
+            <input class="checkIn" type="date" name="checkIn">
+            <p class="checkInErrors msjsErrors"></p>
+            <br>
+            <label for="">Vuelta</label>
+            <input class="checkOut" type="date" name="checkOut">
+            <p class="checkOutErrors msjsErrors"></p>
+            <br>
+            <label for="">Hospedaje</label>
+            <input class="lodging" type="text" name="lodging">
+            <p class="lodgingErrors msjsErrors"></p>
+            <br>
+            <label for="">Vehiculo</label>
+            <input class="vehicle" type="number" name="vehicle_id">
+            <p class="vehicleErrors msjsErrors"></p>
+            <br>
+            <label for="">Excursion1</label>
+            <input class="tour" type="text" name="tour">
+            <p class="tourErrors msjsErrors"></p>
+            <br>
+            <label for="">Excursion2</label>
+            <input class="tour2" type="text" name="tour2">
+            <p class="tour2Errors msjsErrors"></p>
+            <br>
+            <br>
+            <label for="">fecha de creacion del producto</label>
+            <input class="creationDate" type="date" name="creationDate">
+            <br>
+            <br>
+            <label for="">dueDATE</label>
+            <input type="date" name="dueDate">
+            <br>
+            <label for="">Cargar imagen de destino</label>
+            <input class="imgURL" type="file" name="imgURL">
+            <p class="imgURLErrors msjsErrors"></p>
+            <br>
+            <button type="submit">Crear</button>
+        </form>
+        </main>
+
+        <%- include('../partials/footer') %>
+            <script src="/js/productValidations.js">
+
+            </script>
+</body>
+
+</html>

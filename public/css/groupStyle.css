@@ -1,0 +1,25 @@
+*{
+    margin: 0;  /*aca está la dif del footer en margin y padding*/
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root {
+    --yellow:#EAC926;
+    --dark-blue: #03264C;
+    --light-blue: #1259c3;
+    --gray: #666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+  }
+body{
+    background-image: url("../img/banner-seaStar.jpg");
+}
+main{
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-top: 5rem;
+}
+form{
+    padding-bottom: 1rem;
+}

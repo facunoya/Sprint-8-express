@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/groupStyle.css">
+    <title>registro</title>
+</head>
+<body>
+
+    
+    <% for(let i = 0; i < user.length; i++) {%> 
+    <main>
+        <h1>Editar usuario</h1>
+        <form action="/edit/:id?_method=PUT" method="POST">
+            <label for="">Nombre</label>
+            <br><br>
+            <input type="text" name="name" value="<%= user[i].name %>">
+            <br>
+            <label for="">Correo</label>
+            <br><br>
+            <input type="email" name="email" value="<%= user[i].email %>">
+            <br><br>
+            <label for="">Pais</label>
+            <br>
+            <input type="text" name="country" value="<%= locals.old && old.country ? old.country : "" %>">
+            <br><br>
+            <label for="">Celular</label>
+            <br>
+            <input type="text" name="phoneNumber" value="<%= locals.old && old.phoneNumber ? old.phoneNumber : "" %>">
+            <br><br>
+            <label for="">Contraseña</label>
+            <br><br>
+            <input type="password" name="password">
+            <br><br>
+            <select name="profile" id="">
+                <% let profile = ['Administrador', 'Cliente'] %>
+                <% for(let j = 0; j < profile.length; j++) {%>  
+                <option value="<%= profile[j] %>"><%= profile[j] %></option>
+                <% } %> 
+            </select>
+            <br><br>
+            <label for="">Cargar imagen de perfil</label>
+            <br>
+            <input type="file" name="avatar">
+            <br><br>
+            <input type="submit" value="Editar">
+            <%- include("./partials/volver") %>
+        </form>
+    </main>
+    <% } %> 
+  
+</body>
+</html>

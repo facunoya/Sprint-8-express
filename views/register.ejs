@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/css/groupStyle.css">
+        <link rel="stylesheet" href="/css/errorForm.css">
+        <title>registro</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Crear cuenta</h1>
+        <% if(locals.errors) { errors.forEach(err=> { %>
+            <p style="color: orange">
+                <%= err.msg %>
+            </p>
+            <% }); }%>
+                <p style="color: orange">
+                    <%=locals.mensaje ? locals.mensaje : "" %>
+                </p>
+                <form id="formularioRegistro" action="/register" method="POST">
+                    <label for="">Nombre</label>
+                    <br>
+                    <input type="text" name="name" class="name" value="<%= locals.old && old.name ? old.name : "" %>">
+                    <p class="nameErrors msjsErrors"></p>
+                    <br><br>
+                    <label for="">Correo</label>
+                    <br>
+                    <input type="email" name="email" class="email"
+                        value="<%= locals.old && old.email ? old.email : "" %>">
+                    <p class="emailErrors msjsErrors"></p>
+                    <br><br>
+                    <label for="">Pais</label>
+                    <br>
+                    <input type="text" name="country" class="country"
+                        value="<%= locals.old && old.country ? old.country : "" %>">
+                    <p class="countryErrors msjsErrors"></p>
+                    <br><br>
+                    <label for="">Celular</label>
+                    <br>
+                    <input type="text" name="phoneNumber" class="phoneNumber"
+                        value="<%= locals.old && old.phoneNumber ? old.phoneNumber : "" %>">
+                    <p class="phoneNumberErrors msjsErrors"></p>
+                    <br><br>
+                    <label for="">Contraseña</label>
+                    <br>
+                    <input type="password" class="password" name="password">
+                    <p class="passwordErrors msjsErrors"></p>
+                    <br><br>
+                    <select name="profile" id="profile">
+                        <% let profile=['Cliente', 'Administrador' ] %>
+                            <% for(let i=0; i < profile.length; i++) {%>
+                                <option value="<%= profile[i] %>">
+                                    <%= profile[i] %>
+                                </option>
+                                <% } %>
+                    </select>
+                    <br><br>
+                    <label for="">Cargar imagen de perfil</label>
+                    <br>
+                    <input type="file" class="avatar" name="avatar">
+                    <p class="avatarErrors msjsErrors"></p>
+                    <br><br>
+                    <input type="submit" value="Registrarme">
+
+                    <%- include("./partials/volver") %>
+
+                </form>
+    </main>
+    <script src="js/registerValidations.js"></script>
+</body>
+
+</html>
