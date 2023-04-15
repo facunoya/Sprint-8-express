@@ -78,7 +78,7 @@ const UsersControllers = {
         const userLog = allUsers.filter(x => x.email == req.body.email)
 
         if (userLog.length < 1) {
-            res.send('Usuario inexistente')
+            res.render('./login',{"mensaje":"No esta registrado", "old": req.body })
         } else {
             let isMatch = bcryptjs.compareSync(req.body.password, userLog[0].password)
             if (isMatch) {
@@ -87,7 +87,7 @@ const UsersControllers = {
                 res.redirect('home')
                 console.log('te logueaste')
             } else {
-                res.send("contraseña incorrecta")
+                res.render('./login',{"mensaje":"Contraseña incorrecta", "old": req.body})
             }
         }
     },

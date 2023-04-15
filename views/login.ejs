@@ -14,6 +14,14 @@
 
     <main>
         <h1>Iniciar sesión</h1>
+        <% if(locals.errors) { errors.forEach(err=> { %>
+            <p style="color: rgb(236, 162, 50)">
+                <%= err.msg %>
+            </p>
+            <% }); }%>
+                <p style="color: rgba(236, 162, 50)">
+                    <%=locals.mensaje ? locals.mensaje : "" %>
+                </p>
         <form class="loginForm" action="/login" method="POST">
             <label for="">Correo</label>
             <br>
