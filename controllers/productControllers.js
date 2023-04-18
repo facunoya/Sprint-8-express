@@ -17,6 +17,7 @@ const productControllers = {
                 return res.render('./producto/detalleProducto', { "producto": productos })
             })
 
+
     },
     create: (req, res) => { /*Sigue */
         if (req.file) { /*<--- este if es para que recargue la pagina si no carga una imagen*/

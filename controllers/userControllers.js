@@ -78,16 +78,20 @@ const UsersControllers = {
         const userLog = allUsers.filter(x => x.email == req.body.email)
 
         if (userLog.length < 1) {
-            res.render('./login',{"mensaje":"No esta registrado", "old": req.body })
+
+            res.render('./login', { "mensaje": "No esta registrado", "old": req.body })
         } else {
             let isMatch = bcryptjs.compareSync(req.body.password, userLog[0].password)
+            console.log("usuario que paso:", userLog[0])
             if (isMatch) {
                 let userIsLoged = userLog[0]
                 req.session.usuarioLogueado = userIsLoged/*session*/
                 res.redirect('home')
-                console.log('te logueaste')
+                // console.log('te logueaste')
+                // res.send(userIsLoged)
             } else {
-                res.render('./login',{"mensaje":"Contraseña incorrecta", "old": req.body})
+                res.render('./login', { "mensaje": "Contraseña incorrecta", "old": req.body })
+
             }
         }
     },

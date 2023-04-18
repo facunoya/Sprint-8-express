@@ -7,6 +7,10 @@ const productControllers = require('../controllers/productControllers')
 const carritoControllers = require('../controllers/mainControllers')
 const methodOverride = require('method-override');
 
+
+const guestMiddleware = require('../middlewares/guestMiddleware')/*session*/
+const authMiddleware = require('../middlewares/authMiddleware')/*session*/
+
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         let folder = path.join(__dirname, '../public/img')
@@ -30,9 +34,13 @@ router.get('/', mainController.index)
 router.get('/apiReact', (req, res) => {
     res.send(obje)
 })
+
+
+
+
 router.get("/crearProducto", fileUpload.single('imgURL'), productControllers.getCreate);
 router.post("/crearProducto", fileUpload.single('imgURL'), productControllers.create)/*configurado con multer */
-router.get('/productDetail', fileUpload.single('imgURL'), productControllers.product)
+router.get('/productDetail', fileUpload.single('imgURL'), authMiddleware, productControllers.product)
 router.get("/vistaProducto", fileUpload.single('imgURL'), productControllers.product);
 router.get("/:id/edit", carritoControllers.edit);
 router.get("/:id/editProduct", productControllers.edit);
