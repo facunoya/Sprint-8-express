@@ -6,6 +6,12 @@
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
+ .descripcion,
+ .flor1{
+  font-style:oblique;
+  color: #41adce;
+ }
+
  :root {
    --yellow: #EAC926;
    --dark-blue: #03264C;
@@ -155,6 +161,7 @@
    font-weight: 700;
    font-size: 50px;
    margin: 40px 0;
+  
  }
 
 
@@ -274,10 +281,11 @@
  }
 
  .exito {
-   border: solid 0.5px gray;
-   width: 40%;
+  border: dashed gray;
+   width: 98%;
    font-size: 16px;
    text-align: center;
+ 
    margin-bottom: 10px;
  }
 
@@ -519,6 +527,8 @@ footer{
      justify-content: space-around;
      width: 100%;
    }
+
+  
 
    .div-logo {
      margin: 0rem 0rem;
