@@ -82,7 +82,7 @@ const UsersControllers = {
             res.render('./login', { "mensaje": "No esta registrado", "old": req.body })
         } else {
             let isMatch = bcryptjs.compareSync(req.body.password, userLog[0].password)
-            console.log("usuario que paso:", userLog[0])
+            // console.log("usuario que paso:", userLog[0])
             if (isMatch) {
                 let userIsLoged = userLog[0]
                 req.session.usuarioLogueado = userIsLoged/*session*/
@@ -95,8 +95,14 @@ const UsersControllers = {
             }
         }
     },
+    profile: (req, res) => {
+        res.render('profile',{user: req.session.usuarioLogueado})
+        console.log('Estamos en profile');
+        console.log(req.session);
+    },
     getHome: (req, res) => {/*Sigue */
-        res.render('home')
+        res.render('home',{user: req.session.usuarioLogueado})
+        
     },
     allUsers: (req, res) => {/*Sigue */
         db.Users.findAll()

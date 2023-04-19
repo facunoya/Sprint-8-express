@@ -39,6 +39,7 @@ router.delete('/delete/:id', userControllers.delete)
 router.get('/login', userControllers.getLogin)
 router.post('/login', userControllers.login)
 router.get('/home', authMiddleware, userControllers.getHome)
+// router.get('/home', userControllers.profile)
 router.post('/home', userControllers.logout)
 router.get('/check', (req, res) => {    /*Prueba de session */
     if (req.session.usuarioLogueado == undefined) {
