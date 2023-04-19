@@ -40,7 +40,7 @@ router.get('/apiReact', (req, res) => {
 
 router.get("/crearProducto", fileUpload.single('imgURL'), productControllers.getCreate);
 router.post("/crearProducto", fileUpload.single('imgURL'), productControllers.create)/*configurado con multer */
-router.get('/productDetail', fileUpload.single('imgURL'), authMiddleware, productControllers.product)
+router.get('/productDetail', fileUpload.single('imgURL'), productControllers.product)
 router.get("/vistaProducto", fileUpload.single('imgURL'), productControllers.product);
 router.get("/:id/edit", carritoControllers.edit);
 router.get("/:id/editProduct", productControllers.edit);

@@ -113,7 +113,7 @@ const UsersControllers = {
     soldProducts: (req, res) => {/*Sigue */
         db.Userproducts.findAll()
             .then((usuarioproducto) => {
-                res.send(usuarioproducto)
+                res.send(usuarioproducto);
             })
     },
     logout: (req, res) => {
