@@ -96,7 +96,9 @@ const UsersControllers = {
         }
     },
     getHome: (req, res) => {/*Sigue */
-        res.render('home')
+        const flor = req.session.usuarioLogueado;
+        res.render('./home', { "flor": flor})
+       
     },
     allUsers: (req, res) => {/*Sigue */
         db.Users.findAll()
