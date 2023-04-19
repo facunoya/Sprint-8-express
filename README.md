@@ -1,13 +1,17 @@
 > Requisitos
 
-1. Base de datos bien configurada: la protección final y más importante es la de la base de datos. Si todo falla, la base de datos evitará que se carguen datos que puedan dañarla.
+Base de datos de usuarios y productos: en este sprint vamos a trabajar con los datos
+que ya existen en nuestro sitio, por eso necesitamos la base completa y funcionando.
 
 > Objetivo
 
-Vamos a estar validando los formularios del sitio trabajando de atrás para adelante.
-En la primera parte vamos a estar validando los datos desde el back-end. Esta es una protección muy importante ya que como sabemos el usuario no puede acceder al mismo.
-En la segunda parte vamos a estar validando en el front-end. Con esto evitaremos estar enviando información inválida al servidor y, además, mejoraremos la experiencia del visitante.
-Importante tener en cuenta que la validación del front-end puede ser deshabilitada desde el navegador. Por eso es indispensable que también validemos en el back-end.
+En la primera parte van a estar armando una API de usuarios y de productos que exponga los
+datos más importantes de su aplicación.
+En la segunda parte van a estar armando un dashboard hecho en React que consuma los datos
+de la API y muestre de manera resumida las principales métricas de su negocio.
+Un dashboard nos permite ver a simple vista si todo está funcionando bien. Pueden pensarlo
+como el tablero de un auto, donde toda la información que necesitamos está a simple vista.
 
+Tablero de trabajo:
 
-https://trello.com/invite/b/YF5XJzQE/ATTI044d85c376053d09c8a0539555e40c98332F84E3/sprint-7
+https://trello.com/invite/b/p7au8ucQ/ATTI5e0f30895d86a804d9e89f94a6e311874F61CE32/sprint-8
