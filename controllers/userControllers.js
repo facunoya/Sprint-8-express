@@ -95,11 +95,11 @@ const UsersControllers = {
             }
         }
     },
-    profile: (req, res) => {
-        res.render('profile',{user: req.session.usuarioLogueado})
-        console.log('Estamos en profile');
-        console.log(req.session);
-    },
+    // profile: (req, res) => {
+    //     res.render('profile',{user: req.session.usuarioLogueado})
+    //     console.log('Estamos en profile');
+    //     console.log(req.session);
+    // },
     getHome: (req, res) => {/*Sigue */
         res.render('home',{user: req.session.usuarioLogueado})
         
