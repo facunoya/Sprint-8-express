@@ -8,7 +8,9 @@ const userRoutes = require('./routes/usersRoutes')
 
 app.use(express.json())
 app.use(express.static('public'));
-app.use(session({ secret: 'Mi string secreto' }))
+app.use(session({ secret: 'Mi string secreto',
+resave: false,
+saveUninitialized: false, }))
 app.use(mainRouter);
 app.use(userRoutes);
 
