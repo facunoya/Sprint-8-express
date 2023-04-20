@@ -101,8 +101,9 @@ const UsersControllers = {
     //     console.log(req.session);
     // },
     getHome: (req, res) => {/*Sigue */
-        res.render('home',{user: req.session.usuarioLogueado})
-        
+        console.log(req.session)
+        res.render('home', { user: req.session.usuarioLogueado })
+
     },
     allUsers: (req, res) => {/*Sigue */
         db.Users.findAll()
@@ -123,3 +124,4 @@ const UsersControllers = {
 }
 
 module.exports = UsersControllers
+
