@@ -101,8 +101,12 @@ const UsersControllers = {
     //     console.log(req.session);
     // },
     getHome: (req, res) => {/*Sigue */
-        console.log(req.session)
-        res.render('home', { user: req.session.usuarioLogueado })
+        // console.log(req.session)
+        res.render('home', {
+            user: req.session.usuarioLogueado,
+            user: req.session.usuarioLogueado
+
+        })
 
     },
     allUsers: (req, res) => {/*Sigue */
@@ -119,7 +123,7 @@ const UsersControllers = {
     },
     logout: (req, res) => {
         req.session.destroy()
-        res.redirect('/')
+        return res.redirect('/');
     }
 }
 
