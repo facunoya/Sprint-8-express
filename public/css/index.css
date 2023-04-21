@@ -57,6 +57,15 @@
    justify-content: flex-end;
  }
 
+ .barra1:hover,
+ .barra2:hover,
+ .barra3:hover,
+ .barra4:hover,
+ .barra5:hover {
+   color: blue;
+
+ }
+
  .barra a {
    font-size: 100%;
  }
@@ -73,6 +82,7 @@
  .logoutHome {
    margin-right: 700px;
  }
+
 
  .donde {
    position: absolute;
@@ -138,6 +148,12 @@
    color: rgb(0, 0, 0);
    font-size: 16px;
    text-align: center;
+ }
+
+ .nav-bar-out a:hover {
+   background-color: #7ef5df;
+   padding: 0.5rem;
+   border-radius: 1rem;
  }
 
  .p-out {
@@ -348,6 +364,7 @@
 		también se esté haciendo hover a alguna estrella */
    display: flex;
  }
+
 
  .ec-stars-wrapper a {
    text-decoration: none;
