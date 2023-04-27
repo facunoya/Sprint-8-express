@@ -12,23 +12,7 @@ const userCreateValidation = [
     body('name').notEmpty().isLength({ min: 2 }).withMessage('Por favor ingrese un nombre con al menos 2 caracteres'),
     body('email').notEmpty().withMessage('Por favor ingrese un correo válido'),
     body('password').notEmpty().isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
-    body('avatar').custom(function (value, { req }) {
-      let ext
-      if(req.file != undefined ){
-          return true
-      }else{
-          ext = ""+path.extname(req.files[0].filename).toLowerCase();
-      }
-      
-      if (
-          ext == ".jpg" ||
-          ext == ".jpeg" ||
-          ext == ".png" ||
-          ext == ".gif"){
-              return true;
-          }
-          return false;
-    }).withMessage('Solo debe seleccionar archivos  con extensión JPG, JPEG, PNG o GIF')
+    
 ]
 const usersStorage = multer.diskStorage({
     destination: (req, file, callback) => {
