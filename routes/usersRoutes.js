@@ -50,6 +50,7 @@ router.get('/check', (req, res) => {    /*Prueba de session */
 router.get('/allusers', userControllers.allUsers)
 router.get('/soldProducts', userControllers.soldProducts)
 router.get('/comprar', userControllers.compra)
+router.get('/totalventas', userControllers.totalVentas)
 
 
 module.exports = router

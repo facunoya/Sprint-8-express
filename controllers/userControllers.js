@@ -115,6 +115,62 @@ const UsersControllers = {
                 res.send(usuarioproducto)
             })
     },
+    totalVentas: async (req, res) => { /*ESTAMOS ACA */
+        const arreglo = []
+        await db.Userproducts.findAll()
+            .then(data => {
+                // console.log(data[0].product_id)
+                data.forEach(element => {
+                    arreglo.push(element.product_id)
+
+                });
+            })
+
+
+
+
+        arreglo.sort()
+        let unicosElementos = []
+        let almacenadorDeVecesRepetidas = []
+        let contador = 1;
+
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i + 1] == arreglo[i]) {
+                contador++;
+
+            } else {
+                unicosElementos.push(arreglo[i])
+                almacenadorDeVecesRepetidas.push(contador);
+                contador = 1
+            }
+        }
+
+
+        const productosVendidos = []
+        const tresMasVendidos = []
+        for (let j = 0; j < unicosElementos.length; j++) {
+            const prod = {
+                id: unicosElementos[j],
+                cuantity: almacenadorDeVecesRepetidas[j]
+            }
+            productosVendidos.push(prod)
+
+        }
+
+        productosVendidos.sort((a, b) => a.cuantity - b.cuantity)
+
+        tresMasVendidos.push(productosVendidos.pop())
+        tresMasVendidos.push(productosVendidos.pop())
+        tresMasVendidos.push(productosVendidos.pop())
+
+
+
+
+        res.send(tresMasVendidos)
+
+
+
+    },
     compra: (req, res) => {
         // let userlogin = req.session.usuarioLogueado
         // console.log(userlogin)
