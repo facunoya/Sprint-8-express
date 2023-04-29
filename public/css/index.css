@@ -6,12 +6,6 @@
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
- .descripcion,
- .flor1 {
-   font-style: oblique;
-   color: #41adce;
- }
-
  :root {
    --yellow: #EAC926;
    --dark-blue: #03264C;
@@ -57,15 +51,6 @@
    justify-content: flex-end;
  }
 
- .barra1:hover,
- .barra2:hover,
- .barra3:hover,
- .barra4:hover,
- .barra5:hover {
-   color: blue;
-
- }
-
  .barra a {
    font-size: 100%;
  }
@@ -82,7 +67,6 @@
  .logoutHome {
    margin-right: 700px;
  }
-
 
  .donde {
    position: absolute;
@@ -135,35 +119,6 @@
    width: 80%;
  }
 
- .nav-bar-out {
-   text-decoration: none;
-   display: flex;
-   align-items: flex-end;
-   flex-direction: column;
-   width: 95%;
- }
-
- .nav-bar-out a {
-   text-decoration: none;
-   color: rgb(0, 0, 0);
-   font-size: 16px;
-   text-align: center;
- }
-
- .nav-bar-out a:hover {
-   background-color: #7ef5df;
-   padding: 0.5rem;
-   border-radius: 1rem;
- }
-
- .p-out {
-   text-decoration: none;
-   color: rgb(0, 0, 0);
-   font-size: 16px;
-   text-align: center;
-   margin-right: 4%;
- }
-
  .nav-bar a {
    font-size: 16px;
    text-align: center;
@@ -200,7 +155,6 @@
    font-weight: 700;
    font-size: 50px;
    margin: 40px 0;
-
  }
 
 
@@ -320,11 +274,10 @@
  }
 
  .exito {
-   border: dashed gray;
-   width: 98%;
+   border: solid 0.5px gray;
+   width: 40%;
    font-size: 16px;
    text-align: center;
-
    margin-bottom: 10px;
  }
 
@@ -364,7 +317,6 @@
 		también se esté haciendo hover a alguna estrella */
    display: flex;
  }
-
 
  .ec-stars-wrapper a {
    text-decoration: none;
@@ -567,8 +519,6 @@ footer{
      justify-content: space-around;
      width: 100%;
    }
-
-
 
    .div-logo {
      margin: 0rem 0rem;

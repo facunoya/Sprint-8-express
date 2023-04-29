@@ -11,8 +11,7 @@ const authMiddleware = require('../middlewares/authMiddleware')/*session*/
 const userCreateValidation = [
     body('name').notEmpty().isLength({ min: 2 }).withMessage('Por favor ingrese un nombre con al menos 2 caracteres'),
     body('email').notEmpty().withMessage('Por favor ingrese un correo válido'),
-    body('password').notEmpty().isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
-    
+    body('password').notEmpty().isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
 ]
 const usersStorage = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -40,9 +39,7 @@ router.delete('/delete/:id', userControllers.delete)
 router.get('/login', userControllers.getLogin)
 router.post('/login', userControllers.login)
 router.get('/home', authMiddleware, userControllers.getHome)
-// router.get('/home', userControllers.profile)
-router.get('/logout', userControllers.logout)
-// router.post('/home', userControllers.logout)
+router.post('/home', userControllers.logout)
 router.get('/check', (req, res) => {    /*Prueba de session */
     if (req.session.usuarioLogueado == undefined) {
         res.send('No estas logueado')
@@ -52,5 +49,7 @@ router.get('/check', (req, res) => {    /*Prueba de session */
 })
 router.get('/allusers', userControllers.allUsers)
 router.get('/soldProducts', userControllers.soldProducts)
+router.get('/comprar', userControllers.compra)
+
 
 module.exports = router

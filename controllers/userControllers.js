@@ -82,10 +82,15 @@ const UsersControllers = {
             res.render('./login', { "mensaje": "No esta registrado", "old": req.body })
         } else {
             let isMatch = bcryptjs.compareSync(req.body.password, userLog[0].password)
-            // console.log("usuario que paso:", userLog[0])
+            console.log("usuario que paso:", userLog[0])
             if (isMatch) {
                 let userIsLoged = userLog[0]
                 req.session.usuarioLogueado = userIsLoged/*session*/
+                res.locals.usuarioLogueado = userIsLoged;
+                // if (req.body.remember != undefined) {
+                //     res.cookie('remember', userIsLoged.email, { maxAge: 600000 * 10 * 100 })
+                // }
+
                 res.redirect('home')
                 // console.log('te logueaste')
                 // res.send(userIsLoged)
@@ -95,19 +100,8 @@ const UsersControllers = {
             }
         }
     },
-    // profile: (req, res) => {
-    //     res.render('profile',{user: req.session.usuarioLogueado})
-    //     console.log('Estamos en profile');
-    //     console.log(req.session);
-    // },
     getHome: (req, res) => {/*Sigue */
-        // console.log(req.session)
-        res.render('home', {
-            user: req.session.usuarioLogueado,
-            user: req.session.usuarioLogueado
-
-        })
-
+        res.render('home')
     },
     allUsers: (req, res) => {/*Sigue */
         db.Users.findAll()
@@ -118,14 +112,29 @@ const UsersControllers = {
     soldProducts: (req, res) => {/*Sigue */
         db.Userproducts.findAll()
             .then((usuarioproducto) => {
-                res.send(usuarioproducto);
+                res.send(usuarioproducto)
             })
     },
+    compra: (req, res) => {
+        // let userlogin = req.session.usuarioLogueado
+        // console.log(userlogin)
+        let newProd = {
+            "product_id": 23,
+            "user_id": 13,
+            "process_date": "2023-03-24"
+        }
+        db.Userproducts.create({ ...newProd })
+        db.Userproducts.findAll()
+            .then((usuarioproducto) => {
+                res.render('./home', { usuarioproducto })
+            })
+        // res.render('./home')
+    },
     logout: (req, res) => {
-        req.session.destroy()
-        return res.redirect('/');
+        console.log(req.session)
+        // req.session.destroy()  //  <---- GUARDA ACÁ
+        res.send(req.session.usuarioLogueado)
     }
 }
 
 module.exports = UsersControllers
-

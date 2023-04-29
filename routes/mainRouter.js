@@ -37,6 +37,13 @@ router.get('/apiReact', (req, res) => {
 
 
 
+router.get('/pruebacarrito', (req, res) => {
+    res.render('carroUsuario', { "data": req.session })
+})
+
+
+
+
 
 router.get("/crearProducto", fileUpload.single('imgURL'), productControllers.getCreate);
 router.post("/crearProducto", fileUpload.single('imgURL'), productControllers.create)/*configurado con multer */
@@ -44,7 +51,7 @@ router.get('/productDetail', fileUpload.single('imgURL'), productControllers.pro
 router.get("/vistaProducto", fileUpload.single('imgURL'), productControllers.product);
 router.get("/:id/edit", carritoControllers.edit);
 router.get("/:id/editProduct", productControllers.edit);
-router.get("/productCart",authMiddleware, fileUpload.single('imgURL'), carritoControllers.productCart);
+router.get("/productCart", fileUpload.single('imgURL'), carritoControllers.productCart);
 router.put("/:id/edit", carritoControllers.editSave);
 router.put("/:id/editProduct", productControllers.editSave);
 router.get("/:id/delete", fileUpload.single('imgURL'), carritoControllers.delete)

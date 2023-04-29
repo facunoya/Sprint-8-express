@@ -13,7 +13,7 @@ const controllers = {
     productCart: (req, res) => {/*Sigue */
         db.Products.findAll({ include: [{ association: "Vehicles" }, { association: "Destinations" }] })
             .then((productos) => {
-                return res.render('./carrito/productCart', { "producto": productos })
+                return res.render('./carrito/productCart', { "producto": productos, "data": req.session })
             })
     },
     create: (req, res) => {/*modificarla, para que guarde los cambios en la base de datos */

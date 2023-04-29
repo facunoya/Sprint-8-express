@@ -3,8 +3,7 @@ const authMiddleware = (req, res, next) => {
 
         next()
     } else {
-        // res.send('Esta página es solo para usuarios logueados')
-        res.render('login', { "mensaje": "Aun no has iniciado sesión"})
+        res.redirect('/login')
     }
 }
 module.exports = authMiddleware

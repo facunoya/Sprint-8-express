@@ -14,10 +14,15 @@ const productControllers = {
     product: (req, res) => {/*Sigue */
         db.Products.findAll({ include: [{ association: "Vehicles" }, { association: "Destinations" }] })
             .then((productos) => {
-                return res.render('./producto/detalleProducto', { "producto": productos })
+                return res.render('./producto/detalleProducto', { "producto": productos, "data": req.session })
             })
 
 
+    },
+
+    findProduct: async (req, res) => {
+        let product = await db.Products.findByPk(req.params.id, { include: [{ association: "Vehicles" }, { association: "Destinations" }] })
+        return res.json(product)
     },
     create: (req, res) => { /*Sigue */
         if (req.file) { /*<--- este if es para que recargue la pagina si no carga una imagen*/
