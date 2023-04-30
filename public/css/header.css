@@ -29,6 +29,10 @@
     right: 3rem;
     bottom: 0.7rem;
 }
+.logout{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 
 .barra1,
 .barra2,

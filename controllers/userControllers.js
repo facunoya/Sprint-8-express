@@ -90,7 +90,7 @@ const UsersControllers = {
                 // if (req.body.remember != undefined) {
                 //     res.cookie('remember', userIsLoged.email, { maxAge: 600000 * 10 * 100 })
                 // }
-
+                
                 res.redirect('home')
                 // console.log('te logueaste')
                 // res.send(userIsLoged)
@@ -101,7 +101,8 @@ const UsersControllers = {
         }
     },
     getHome: (req, res) => {/*Sigue */
-        res.render('home')
+    let user= req.session.usuarioLogueado
+        res.render('home', {"user": user})
     },
     allUsers: (req, res) => {/*Sigue */
         db.Users.findAll()
