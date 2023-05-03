@@ -189,8 +189,8 @@ const UsersControllers = {
     },
     logout: (req, res) => {
         console.log(req.session)
-        // req.session.destroy()  //  <---- GUARDA ACÁ
-        res.send(req.session.usuarioLogueado)
+        req.session.destroy()  //  <---- GUARDA ACÁ
+        return res.redirect('login')
     }
 }
 
