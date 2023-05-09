@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/groupStyle.css">
-    <link rel="stylesheet" href="/css/errorForm.css">
+        <link rel="stylesheet" href="/css/groupStyle.css">
+        <link rel="stylesheet" href="/css/errorForm.css">
         <title>Carrito</title>
 </head>
 
 <body class="bodyClass">
-    <%- include('../partials/header') %>
-        <main>
-            <h2>Agregar producto</h2>
+
+    <main>
+        <h2>Agregar producto</h2>
         <form class="formCreateProduct" action="/crearProducto" method="POST" enctype="multipart/form-data">
             <label for="">Destino</label>
             <input class="destination" type="number" name="destination_id">
@@ -74,12 +74,12 @@
             <br>
             <button type="submit">Crear</button>
         </form>
-        </main>
+    </main>
 
-        <%- include('../partials/footer') %>
-            <script src="/js/productValidations.js">
+    <%- include('../partials/footer') %>
+        <script src="/js/productValidations.js">
 
-            </script>
+        </script>
 </body>
 
 </html>
